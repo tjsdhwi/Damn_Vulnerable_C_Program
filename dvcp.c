@@ -57,7 +57,7 @@ int ProcessImage(char* filename){
 			//heap buffer overflow
 			memcpy(buff1,img.data,sizeof(img.data));
 			free(buff1);
-			//double free	
+			buff1 = NULL;
 			if (size1 % 2 == 0){
 				free(buff1);
 			}
